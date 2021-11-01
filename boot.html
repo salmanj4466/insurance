@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <!-- Favicon -->
+      <link rel="icon" href="assets/images/favicon.png" type="image/ico" />
+      <!-- Google fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <!-- Stylesheet -->
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+      <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+      <title>Bajatuseguro</title>
+   </head>
+   <body>
+      <!-- Boot -->
+      <section class="boot-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 col-lg-5 text-center">
+                  <h5>Bienvenido a</h5>
+                  <img class="img-fluid my-3 my-md-4" width="300" src="assets/images/logo-boot.png" alt="logo"> 
+                  <h2>La  plataforma tecnológica</h2>
+                  <h4>#1 de  todo tipo de seguros en México.</h4>
+                  <img class="img-fluid d-sm-none" src="assets/images/boot.png" alt="boot"> 
+                  <p>Selecciona una opción para continuar</p>
+                  <button type="button" class="btn btn-primary mx-2 my-1"><img width="22" src="assets/images/emoji.png" alt="emoji"> Persona</button>
+                  <button type="button" class="btn btn-primary mx-2 my-1"><i class="icon-business mr-1"></i> Empresa</button>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Jquery -->
+      <script src="assets/js/jquery-3.5.1.js"></script>
+      <script src="assets/js/popper.min.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/owl.carousel.min.js"></script>
+      <script>
+         /// some script
+         
+         // jquery ready start
+         $(document).ready(function () {
+         // jQuery code
+         
+         $("[data-trigger]").on("click", function (e) {
+         e.preventDefault();
+         e.stopPropagation();
+         var offcanvas_id = $(this).attr("data-trigger");
+         $(offcanvas_id).toggleClass("show");
+         $("body").toggleClass("offcanvas-active");
+         $(".screen-overlay").toggleClass("show");
+         });
+         
+         // Close menu when pressing ESC
+         $(document).on("keydown", function (event) {
+         if (event.keyCode === 27) {
+         $(".mobile-offcanvas").removeClass("show");
+         $("body").removeClass("overlay-active");
+         }
+         });
+         
+         $(".btn-close, .screen-overlay").click(function (e) {
+         $(".screen-overlay").removeClass("show");
+         $(".mobile-offcanvas").removeClass("show");
+         $("body").removeClass("offcanvas-active");
+         });
+         }); // jquery end
+         
+      </script>
+   </body>
+</html>
